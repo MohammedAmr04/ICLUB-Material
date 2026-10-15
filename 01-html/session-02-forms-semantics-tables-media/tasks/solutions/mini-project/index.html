@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web Academy — session 2 demo page: forms, tables, and media." />
+    <title>Web Academy — Session 2</title>
+  </head>
+  <body>
+    <header>
+      <p>Web Academy</p>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#register">Register</a></li>
+          <li><a href="#media">Media</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Learn Web Development</h1>
+      <p>Start with HTML, then continue to CSS and JavaScript.</p>
+
+      <section id="courses">
+        <h2>Weekly schedule</h2>
+
+        <table>
+          <caption>Weekly Web Development Schedule</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Topic</th>
+              <th scope="col">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Saturday</th>
+              <td>HTML Forms</td>
+              <td>60 minutes</td>
+            </tr>
+            <tr>
+              <th scope="row">Sunday</th>
+              <td>HTML Tables</td>
+              <td>45 minutes</td>
+            </tr>
+            <tr>
+              <th scope="row">Monday</th>
+              <td>Audio and Video</td>
+              <td>45 minutes</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="2">Total learning time</th>
+              <td>150 minutes</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section id="register">
+        <h2>Register</h2>
+
+        <form action="/register" method="post">
+          <div>
+            <label for="full-name">Full name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="fullName"
+              autocomplete="name"
+              required
+              minlength="3"
+            />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+
+          <fieldset>
+            <legend>Preferred learning format</legend>
+            <label>
+              <input type="radio" name="format" value="online" required />
+              Online
+            </label>
+            <label>
+              <input type="radio" name="format" value="onsite" />
+              On-site
+            </label>
+          </fieldset>
+
+          <div>
+            <label for="track">Choose a track</label>
+            <select id="track" name="track" required>
+              <option value="" disabled selected>-- Choose one --</option>
+              <option value="frontend">Front-end</option>
+              <option value="backend">Back-end</option>
+              <option value="uiux">UI/UX</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="notes">Additional notes</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+          </div>
+
+          <label>
+            <input type="checkbox" name="terms" required />
+            I agree to the terms
+          </label>
+
+          <button type="submit">Register</button>
+        </form>
+      </section>
+
+      <section id="media">
+        <h2>Media</h2>
+
+        <figure>
+          <figcaption>Listen to the lesson introduction</figcaption>
+          <audio controls>
+            <source src="media/intro.mp3" type="audio/mpeg" />
+            <source src="media/intro.wav" type="audio/wav" />
+            <p>
+              Your browser cannot play this audio.
+              <a href="media/intro.mp3">Download the audio</a>.
+            </p>
+          </audio>
+        </figure>
+
+        <figure>
+          <video controls width="640" poster="media/lesson-poster.jpg">
+            <source src="media/lesson.mp4" type="video/mp4" />
+            <source src="media/lesson.webm" type="video/webm" />
+            <track
+              kind="captions"
+              src="media/lesson-en.vtt"
+              srclang="en"
+              label="English"
+              default
+            />
+            <p>
+              Your browser does not support HTML video.
+              <a href="media/lesson.mp4">Download the video</a>.
+            </p>
+          </video>
+          <figcaption>Introduction to HTML</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer>
+      <address>Contact: <a href="mailto:hello@example.com">hello@example.com</a></address>
+    </footer>
+  </body>
+</html>

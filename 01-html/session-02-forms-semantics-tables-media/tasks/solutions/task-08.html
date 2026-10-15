@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+  </head>
+  <body>
+    <main>
+      <h1>Lesson Video</h1>
+
+      <figure>
+        <video controls width="640" poster="media/lesson-poster.jpg">
+          <source src="media/lesson.mp4" type="video/mp4" />
+          <source src="media/lesson.webm" type="video/webm" />
+
+          <track
+            kind="captions"
+            src="media/lesson-en.vtt"
+            srclang="en"
+            label="English"
+            default
+          />
+
+          <p>
+            Your browser does not support HTML video.
+            <a href="media/lesson.mp4">Download the video</a>.
+          </p>
+        </video>
+
+        <figcaption>Introduction to HTML</figcaption>
+      </figure>
+    </main>
+  </body>
+</html>

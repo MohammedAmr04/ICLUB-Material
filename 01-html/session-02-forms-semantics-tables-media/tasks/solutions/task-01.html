@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search</title>
+  </head>
+  <body>
+    <main>
+      <h1>Search</h1>
+      <form action="/search" method="get">
+        <div>
+          <label for="q">Search</label>
+          <input type="search" id="q" name="q" />
+        </div>
+
+        <div>
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option value="all">All</option>
+            <option value="courses">Courses</option>
+            <option value="articles">Articles</option>
+          </select>
+        </div>
+
+        <button type="submit">Search</button>
+      </form>
+    </main>
+  </body>
+</html>

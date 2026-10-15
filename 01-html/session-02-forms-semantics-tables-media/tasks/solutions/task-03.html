@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match the control to the data</title>
+  </head>
+  <body>
+    <main>
+      <h1>Profile</h1>
+
+      <!--
+        1. email     -> type="email"  : browser checks basic format and keyboard fits
+        2. phone     -> type="tel"    : numeric keypad on mobile, no false validation
+        3. dob       -> type="date"   : native date picker
+        4. website   -> type="url"    : browser checks scheme/format
+        5. quantity  -> type="number" : min/max/step enforce the range
+        6. password  -> type="password" : characters obscured
+        7. photo     -> type="file" + accept="image/*" : limits the picker to images
+      -->
+      <form action="/profile" method="post" enctype="multipart/form-data">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+
+        <div>
+          <label for="dob">Date of birth</label>
+          <input type="date" id="dob" name="dob" />
+        </div>
+
+        <div>
+          <label for="site">Website</label>
+          <input type="url" id="site" name="site" />
+        </div>
+
+        <div>
+          <label for="qty">Quantity</label>
+          <input type="number" id="qty" name="qty" min="1" max="20" step="1" />
+        </div>
+
+        <div>
+          <label for="pw">Password</label>
+          <input type="password" id="pw" name="pw" minlength="8" required />
+        </div>
+
+        <div>
+          <label for="photo">Profile photo</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+        </div>
+
+        <button type="submit">Save</button>
+      </form>
+    </main>
+  </body>
+</html>

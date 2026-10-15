@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <main>
+      <h1>Course Registration</h1>
+
+      <form action="/register" method="post">
+        <div>
+          <label for="full-name">Full name</label>
+          <input
+            type="text"
+            id="full-name"
+            name="fullName"
+            autocomplete="name"
+            required
+            minlength="3"
+          />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+        </div>
+
+        <div>
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" min="10" max="100" />
+        </div>
+
+        <fieldset>
+          <legend>Preferred learning format</legend>
+          <label>
+            <input type="radio" name="format" value="online" required />
+            Online
+          </label>
+          <label>
+            <input type="radio" name="format" value="onsite" />
+            On-site
+          </label>
+        </fieldset>
+
+        <div>
+          <label for="track">Choose a track</label>
+          <select id="track" name="track" required>
+            <option value="" disabled selected>-- Choose one --</option>
+            <option value="frontend">Front-end</option>
+            <option value="backend">Back-end</option>
+            <option value="uiux">UI/UX</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="notes">Additional notes</label>
+          <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
+
+        <label>
+          <input type="checkbox" name="terms" required />
+          I agree to the terms
+        </label>
+
+        <button type="submit">Register</button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <main>
+      <h1>Quiz</h1>
+
+      <form action="/submit" method="post">
+        <!--
+          The two questions use DIFFERENT name values (q1 vs q2).
+          Radios that share a name are treated as ONE group: selecting one
+          deselects the others in that group. If both questions shared a name,
+          picking an answer in question 1 would clear the answer in question 2.
+        -->
+        <fieldset>
+          <legend>Q1: Which language structures content?</legend>
+          <label><input type="radio" name="q1" value="html" required /> HTML</label>
+          <label><input type="radio" name="q1" value="css" /> CSS</label>
+          <label><input type="radio" name="q1" value="js" /> JavaScript</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Q2: Which language styles content?</legend>
+          <label><input type="radio" name="q2" value="html" required /> HTML</label>
+          <label><input type="radio" name="q2" value="css" /> CSS</label>
+          <label><input type="radio" name="q2" value="js" /> JavaScript</label>
+        </fieldset>
+
+        <!--
+          Checkboxes differ from radios: they are independent, so each has its own
+          name and the user may check any number of them (including none).
+        -->
+        <fieldset>
+          <legend>Choose all that apply: front-end languages</legend>
+          <label><input type="checkbox" name="lang_html" value="html" /> HTML</label>
+          <label><input type="checkbox" name="lang_css" value="css" /> CSS</label>
+          <label><input type="checkbox" name="lang_js" value="js" /> JavaScript</label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
