@@ -1,0 +1,73 @@
+﻿<!-- task-05.html + task-05.css combined -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 5 — Units & Tokens</title>
+    <link rel="stylesheet" href="task-05.css" />
+  </head>
+  <body>
+    <article class="card">
+      <h2>Card</h2>
+      <p>Built with tokens and rem units.</p>
+      <button>Action</button>
+    </article>
+  </body>
+</html>
+
+<style>
+:root {
+  --color-ink: #111;
+  --color-bg: #f9fafb;
+  --color-brand: hsl(220 90% 56%);
+  --space-1: 1rem;
+  --space-2: 1.5rem;
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--color-ink);
+  padding: var(--space-2);
+  background: white;
+}
+
+.card {
+  max-width: 20rem;
+  background: var(--color-bg);
+  padding: var(--space-2);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.06);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-block-end: var(--space-1);
+}
+
+.card p {
+  margin-block-end: var(--space-1);
+}
+
+button {
+  font: inherit;
+  background: var(--color-brand);
+  color: white;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: hsl(220 90% 46%);
+}
+
+</style>

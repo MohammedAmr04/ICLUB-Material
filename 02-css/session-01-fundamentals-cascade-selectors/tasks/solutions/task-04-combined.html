@@ -1,0 +1,29 @@
+﻿<!-- task-04.html + task-04.css combined -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4 — Cascade & Specificity</title>
+    <link rel="stylesheet" href="task-04.css" />
+  </head>
+  <body>
+    <p id="lead" class="intro">Which colour am I?</p>
+  </body>
+</html>
+
+<style>
+p {
+  color: black;
+}
+.intro {
+  color: green;
+}
+p.intro {
+  color: orange;
+}
+#lead {
+  color: blue;
+}
+
+</style>

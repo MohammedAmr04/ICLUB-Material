@@ -1,0 +1,90 @@
+﻿<!-- finished combined -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Session 1 â€” Finished</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome</h1>
+      <p class="lead">This is a CSS example.</p>
+      <button>Click me</button>
+    </div>
+  </body>
+</html>
+<style>
+/* ---- tokens: one source of truth for colour ---- */
+:root {
+  --color-ink: oklch(0.25 0.02 260);
+  --color-body: rgb(80 80 80);
+  --color-brand: #0066ff;
+  --space-1: 1rem;
+  --space-2: 1.5rem;
+}
+
+/* ---- reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+/* ---- layout + inheritance: colour flows down ---- */
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--color-ink);
+  padding: var(--space-2);
+  background-color: #fafafa;
+}
+
+.container {
+  max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* ---- elements ---- */
+h1 {
+  font-size: 2.25rem; /* rem: scales with the root */
+  color: var(--color-brand);
+  margin-block-end: var(--space-1);
+}
+
+.lead {
+  color: var(--color-body);
+  margin-block-end: var(--space-2);
+}
+
+/* button does not inherit text styles by default â€” force it */
+button {
+  font: inherit;
+  background: var(--color-brand);
+  color: white;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: hsl(220 90% 46%);
+}
+button:focus-visible {
+  outline: 2px solid hsl(220 90% 46%);
+  outline-offset: 2px;
+}
+
+.text-clip {
+  background-image: linear-gradient(90deg, #0047ff, #0ea5e9);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+</style>

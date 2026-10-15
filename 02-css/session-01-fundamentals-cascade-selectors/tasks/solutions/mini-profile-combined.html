@@ -1,0 +1,59 @@
+﻿<!-- mini-profile combined -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Profile</title>
+    <link rel="stylesheet" href="mini-profile.css" />
+  </head>
+  <body>
+    <section class="profile">
+      <h1 class="profile__title">Nour</h1>
+      <p class="profile__desc">Frontend learner building small, accessible pages.</p>
+      <button class="profile__btn">Contact</button>
+    </section>
+  </body>
+</html>
+
+<style>
+:root {
+  --color-ink: #0f172a;
+  --color-brand: #2563eb;
+  --space-1: 1rem;
+  --space-2: 1.5rem;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--color-ink);
+  padding: var(--space-2);
+}
+.profile {
+  max-width: 24rem;
+}
+.profile__title {
+  color: var(--color-brand);
+  margin-block-end: var(--space-1);
+}
+.profile__desc {
+  margin-block-end: var(--space-2);
+}
+.profile__btn {
+  font: inherit;
+  background: var(--color-brand);
+  color: white;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+}
+.profile__btn:hover {
+  background: hsl(221 83% 53%);
+}
+
+</style>

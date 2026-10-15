@@ -1,0 +1,12 @@
+﻿p {
+  color: black;
+}
+.intro {
+  color: green;
+}
+p.intro {
+  color: orange;
+}
+#lead {
+  color: blue;
+}
