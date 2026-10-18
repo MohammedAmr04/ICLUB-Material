@@ -1,7 +1,94 @@
-﻿<!-- task-06 combined -->
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>task-06</title><link rel='stylesheet' href='task-06.css'></head><body><div class='demo'>Demo</div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6 - Border, Shadows & Overflow</title>
+  
+    <style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-<style>
-*{box-sizing:border-box;margin:0}.demo{padding:1rem}
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  padding: 1.5rem;
+  background: #f8fafc;
+}
 
-</style>
+.card {
+  max-width: 320px;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #fff;
+  /* clips children to the radius (note: breaks position: sticky below!) */
+  overflow: hidden;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.12),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card-media img {
+  display: block;
+  width: 100%;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* focus ring that never shifts layout */
+.btn:focus-visible {
+  outline: 2px solid #0047ff;
+  outline-offset: 2px;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* angled hero edge via clip-path */
+.hero {
+  margin-block-start: 2rem;
+  padding: 3rem 1.5rem 4rem;
+  background: linear-gradient(90deg, #0047ff, #0ea5e9);
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+    </style>
+</head>
+  <body>
+    <div class="card">
+      <div class="card-media">
+        <img
+          src="https://picsum.photos/seed/shadow/640/360"
+          alt="Card media clipped to the rounded corners"
+        />
+      </div>
+      <div class="card-body">
+        <h2>Elevated card</h2>
+        <p>Hover to elevate. The image is clipped by overflow: hidden.</p>
+        <button class="btn" type="button">Focus me with Tab</button>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h2>Clip-path hero</h2>
+    </section>
+  </body>
+</html>

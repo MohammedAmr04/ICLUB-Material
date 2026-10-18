@@ -1,4 +1,4 @@
-﻿# Session 2 — Fonts, Text, Opacity, Sizing, Display, Box Model, Position, Borders, Shadows, Overflow
+﻿# Session 2 — Topics
 
 - Fonts
 - Text

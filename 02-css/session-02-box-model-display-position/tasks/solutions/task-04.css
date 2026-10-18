@@ -1,1 +1,72 @@
-﻿*{box-sizing:border-box;margin:0}.demo{padding:1rem}
+﻿*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+.card {
+  width: 320px;
+  max-width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* aspect-ratio reserves the box before the image loads - no fixed height */
+.media {
+  aspect-ratio: 16 / 9;
+}
+
+.media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* fit-content: grow to content, never stretch to the container */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  width: fit-content;
+  margin-block: 1.5rem;
+}
+
+/* inline ignores width/height; inline-block honours the box */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: #f1f5f9;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.hidden-row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+}
+
+.hide-none {
+  display: none;
+}
+
+.hide-vis {
+  visibility: hidden;
+}
+
+.hide-fade {
+  opacity: 0;
+}

@@ -1,1 +1,40 @@
-﻿<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>task-03</title><link rel='stylesheet' href='task-03.css'></head><body><div class='demo'>Demo</div></body></html>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3 - Opacity, Filters & Icons</title>
+    <link rel="stylesheet" href="task-03.css" />
+  </head>
+  <body>
+    <div class="card faded-bg">
+      <h2>Background faded</h2>
+      <p>Only the background uses alpha - the text stays fully readable.</p>
+    </div>
+
+    <div class="card faded-all">
+      <h2>Whole card faded</h2>
+      <p>opacity: 0.4 fades this text too.</p>
+    </div>
+
+    <figure class="thumb">
+      <img
+        src="https://picsum.photos/seed/css/400/240"
+        alt="Demo photo in grayscale"
+      />
+      <figcaption>Hover me - colour returns</figcaption>
+    </figure>
+
+    <button class="btn" type="button" aria-label="Close">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M6 6l12 12M18 6L6 18"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+        />
+      </svg>
+      <span>Close</span>
+    </button>
+  </body>
+</html>

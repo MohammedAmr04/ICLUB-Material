@@ -1,7 +1,114 @@
-﻿<!-- task-04 combined -->
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>task-04</title><link rel='stylesheet' href='task-04.css'></head><body><div class='demo'>Demo</div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4 - Sizing & Display</title>
+  
+    <style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-<style>
-*{box-sizing:border-box;margin:0}.demo{padding:1rem}
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  padding: 1.5rem;
+}
 
-</style>
+.card {
+  width: 320px;
+  max-width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* aspect-ratio reserves the box before the image loads - no fixed height */
+.media {
+  aspect-ratio: 16 / 9;
+}
+
+.media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* fit-content: grow to content, never stretch to the container */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  width: fit-content;
+  margin-block: 1.5rem;
+}
+
+/* inline ignores width/height; inline-block honours the box */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: #f1f5f9;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.hidden-row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+}
+
+.hide-none {
+  display: none;
+}
+
+.hide-vis {
+  visibility: hidden;
+}
+
+.hide-fade {
+  opacity: 0;
+}
+    </style>
+</head>
+  <body>
+    <div class="card">
+      <div class="media">
+        <img
+          src="https://picsum.photos/seed/aspect/640/360"
+          alt="16 by 9 demo"
+        />
+      </div>
+      <div class="card-body">
+        <h2>Sized card</h2>
+        <p>max-width: 100% keeps it inside narrow containers.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="button">Save</button>
+      <button type="button">Cancel</button>
+    </div>
+
+    <p>
+      A <a href="#">link is inline</a> until it becomes
+      <span class="tag">inline-block</span> with padding.
+    </p>
+
+    <div class="hidden-row">
+      <span class="hide-none">display: none</span>
+      <span class="hide-vis">visibility: hidden</span>
+      <span class="hide-fade">opacity: 0 (still clickable)</span>
+      <span>Visible</span>
+    </div>
+  </body>
+</html>

@@ -1,1 +1,64 @@
-﻿*{box-sizing:border-box;margin:0}.demo{padding:1rem}
+﻿*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  padding: 1.5rem;
+  background: #f8fafc;
+}
+
+.card {
+  max-width: 320px;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #fff;
+  /* clips children to the radius (note: breaks position: sticky below!) */
+  overflow: hidden;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.12),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card-media img {
+  display: block;
+  width: 100%;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* focus ring that never shifts layout */
+.btn:focus-visible {
+  outline: 2px solid #0047ff;
+  outline-offset: 2px;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* angled hero edge via clip-path */
+.hero {
+  margin-block-start: 2rem;
+  padding: 3rem 1.5rem 4rem;
+  background: linear-gradient(90deg, #0047ff, #0ea5e9);
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}

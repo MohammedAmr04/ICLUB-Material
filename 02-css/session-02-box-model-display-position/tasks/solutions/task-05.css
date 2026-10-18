@@ -1,1 +1,84 @@
-﻿*{box-sizing:border-box;margin:0}.demo{padding:1rem}
+﻿/* global reset: width includes padding + border */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 1.5rem;
+}
+
+/* sticky: relative until the threshold, then pinned */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar a {
+  color: #0047ff;
+  margin-inline-start: 0.75rem;
+}
+
+/* absolute child anchored by the nearest positioned ancestor */
+.parent {
+  position: relative;
+  width: fit-content;
+  padding: 1.5rem;
+  margin-block: 2rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.child {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  min-width: 1.25rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/* margins collapse: 1rem gap, not 2rem */
+.collapse-demo {
+  border: 1px dashed #94a3b8;
+  padding: 0.5rem;
+}
+
+.collapse-demo p {
+  margin: 1rem 0;
+}
+
+/* fix: display: flow-root creates a block formatting context */
+.fenced {
+  display: flow-root;
+  border: 1px dashed #16a34a;
+  padding: 0.5rem;
+}
+
+.fenced p {
+  margin: 1rem 0;
+}
+
+footer {
+  margin-block-start: 4rem;
+  padding-block: 2rem;
+  color: #64748b;
+}

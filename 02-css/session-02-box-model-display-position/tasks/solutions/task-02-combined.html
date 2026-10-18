@@ -1,7 +1,84 @@
-﻿<!-- task-02 combined -->
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>task-02</title><link rel='stylesheet' href='task-02.css'></head><body><div class='demo'>Demo</div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2 - Text Controls</title>
+  
+    <style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-<style>
-*{box-sizing:border-box;margin:0}.demo{padding:1rem}
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  padding: 1.5rem;
+}
 
-</style>
+.headline {
+  font-size: 2rem;
+  line-height: 1.15;
+  text-wrap: balance;
+  margin-block-end: 1.5rem;
+}
+
+.card {
+  max-width: 320px;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-block-end: 1rem;
+}
+
+.desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.desc-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tags {
+  list-style: square;
+  padding-inline-start: 1.25rem;
+}
+
+.tags li::marker {
+  color: #0047ff;
+  font-weight: 700;
+}
+    </style>
+</head>
+  <body>
+    <h1 class="headline">Designing readable interfaces for every screen size</h1>
+
+    <div class="card">
+      <p class="desc">
+        A card description that must never grow taller than a single line, no
+        matter how long the text becomes inside it.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="desc-clamp">
+        This longer description is clamped to three lines. When the text
+        exceeds the limit, the browser adds an ellipsis at the end so the card
+        keeps a predictable height across a grid of items.
+      </p>
+    </div>
+
+    <ul class="tags">
+      <li>CSS</li>
+      <li>Typography</li>
+      <li>Layout</li>
+    </ul>
+  </body>
+</html>
