@@ -3,6 +3,8 @@ and reports shapes whose text does not fit, or that leave the slide bounds.
 
 Usage:  python check_overflow.py [deck.pptx]
 """
+import utils.transport
+import utils.session
 import glob
 import os
 import sys
